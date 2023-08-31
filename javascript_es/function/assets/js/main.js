@@ -15,6 +15,8 @@ function isEven (userNumber) {
     return false
 };
 
+//----------------- con il prompt------------------------
+
 /* const userNumber = prompt('scegli un numero')
 const result = isEven(userNumber);
 console.log(result);
@@ -26,6 +28,14 @@ if (result) {
     console.log('Il numero è dispari');
 
 } */
+
+//--------------------------------------------------------
+
+
+
+
+
+//---------------- con l'input ---------------------------
 
 const checkButton = document.querySelector('button');
 const inputNumber = document.getElementById('user_number');
@@ -42,3 +52,10 @@ checkButton.addEventListener('click', function() {
     
     }
 });
+
+//--------------------------------------------------------------
+
+/**
+ * 
+ * @param {}
+ */
