@@ -1,0 +1,36 @@
+/* css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+.field {
+    display: flex;
+    flex-wrap: wrap;
+
+
+ & .cell {
+    width: calc(100% / 8);
+    aspect-ratio: 1 / 1;
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+ }
+}
+
+.bg-green {
+    background-color: palegreen;
+}
