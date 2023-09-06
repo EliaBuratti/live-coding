@@ -27,7 +27,7 @@ for (const key in palla) {
 // - ogni elemento dell'array è un oggetto che rappresenta una classe
 // - ogni classe ha le proprietà nome e numeroStudenti
 
-
+/* 
 const school = [
     {
         nome : '1a',
@@ -71,3 +71,73 @@ for (const key in school) {
     console.log(key);
     console.log(school[key]);
 }
+ */
+
+//---------------------------------------------------------------------------------------------------------------------------
+
+/* const student = {
+    name : 'Elia',
+    lastName : 'Buratti',
+    age : 27 ,
+} //object litteral
+
+student['name'] //Elia
+student.name //Elia
+
+for (const key in student) {
+    const value = student[key];
+    //console.log(value);
+} */
+
+//array di oggetti
+
+const students = [
+    {
+        name : 'Elia',
+        lastName : 'Buratti',
+        age : 27 ,
+    },
+    {
+        name : 'Mario',
+        lastName : 'Rossi',
+        age : 54 ,
+    },
+    {
+        name : 'Andrea',
+        lastName : 'Belletti',
+        age : 19 ,
+    },
+    {
+        name : 'Fabio',
+        lastName : 'Cipolla',
+        age : 34 ,
+    },
+
+];
+
+const roeElement = document.querySelector('.student');
+console.log(roeElement);
+
+for (let i = 0; i < students.length; i++) {
+    const student = students[i];
+
+    console.log(student.name);
+    console.log(student.lastName);
+    console.log(student.age);
+
+    const markup = 
+    `<div class="col-3">
+        <div class="card">
+            <img src="https://picsum.photos/seed/picsum/700/400" alt="" class="card-img-top">
+            <div class="card-body">
+                <h4>${student.name} ${student.lastName}</h4>
+                <p>${student.age}</p>
+            </div>
+        </div>
+    </div>`
+
+    roeElement.insertAdjacentHTML('beforeend', markup);
+
+    
+}
+
