@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue live </title>
+
+    <style>
+
+        .bg-dark {
+            background-color: black;
+        }
+
+        .text-white {
+            color: white;
+        }
+        .text-green {
+            color: green;
+        }
+        .text-purple {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+
+        <!-- v-model -->
+        <input type="text" v-model="name">
+        {{name}}
+        <br>
+
+        <!-- v-bind -->
+        <h1 v-bind:class="css">Titolo</h1>
+        <br>
+
+        <!-- v-on -->
+        <button v-on:click="saluti(name)">click me</button>
+        <br>
+
+
+        <!-- Predisponiamo due input, in cui inseriremo Nome e Cognome.
+            In un paragrafo utilizzare Nome e Cognome per salutare l’utente -->
+
+        <input type="text" v-model="userName">
+        <input type="text" v-model="userSurname">
+
+        <p>ciao {{userName + ' ' + userSurname}}</p>
+        <br>
+
+        <!-- Creiamo una pagina con all’interno un titolo di colore rosso.
+            Al click di un bottone il titolo diventerà blu. -->
+
+            <h2 v-bind:class="titleColor">Titolo diverso</h2>
+            <button v-on:click="updateColor()">Cambia colore</button>
+            
+    </div>
+
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="./script.js"></script>    
+</body>
+</html>
