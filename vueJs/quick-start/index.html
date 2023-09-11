@@ -29,15 +29,15 @@
         <!-- v-model -->
         <input type="text" v-model="name">
         {{name}}
-        <br>
+        <hr>
 
         <!-- v-bind -->
         <h1 v-bind:class="css">Titolo</h1>
-        <br>
+        <hr>
 
         <!-- v-on -->
         <button v-on:click="saluti(name)">click me</button>
-        <br>
+        <hr>
 
 
         <!-- Predisponiamo due input, in cui inseriremo Nome e Cognome.
@@ -47,14 +47,14 @@
         <input type="text" v-model="userSurname">
 
         <p>ciao {{userName + ' ' + userSurname}}</p>
-        <br>
+        <hr>
 
         <!-- Creiamo una pagina con all’interno un titolo di colore rosso.
             Al click di un bottone il titolo diventerà blu. -->
 
             <h2 v-bind:class="titleColor">Titolo diverso</h2>
             <button v-on:click="updateColor()">Cambia colore</button>
-            
+
     </div>
 
     
