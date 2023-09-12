@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div id='app'>
+        <!-- write your code here -->
+
+
+		<h1 class="title">TITLE_GOES_HERE</h1>
+
+		<div class="container">
+			<div class="card movie">
+				<img :src="movie.images[activeImage]" alt="">
+
+				<div class="thumbnails">
+					<img src="https://www.themoviedb.org/t/p/w500/b3zVRZ9R2QyV0klRESMLKaBwQqm.jpg" class="thumb">
+					<img src="https://www.themoviedb.org/t/p/w500/b3zVRZ9R2QyV0klRESMLKaBwQqm.jpg" class="thumb">
+					<img src="https://www.themoviedb.org/t/p/w500/b3zVRZ9R2QyV0klRESMLKaBwQqm.jpg" class="thumb">
+					<img src="https://www.themoviedb.org/t/p/w500/b3zVRZ9R2QyV0klRESMLKaBwQqm.jpg" class="thumb">
+					<img src="https://www.themoviedb.org/t/p/w500/b3zVRZ9R2QyV0klRESMLKaBwQqm.jpg" class="thumb">
+				</div>
+
+				<div class="navigator">
+					<div class="prev" @click="prev()">
+						<i class="fa-solid fa-chevron-left"></i>
+					</div>
+					<div class="next"  @click="next()">
+						<i class="fa-solid fa-chevron-right">
+						</i>
+					</div>
+				</div>
+				<div class="details">
+					<h3 class="title"></h3>
+					<div>Category: {{movie.category}} </div>
+					<small>Lenght: {{movie.length}} min </small>
+				</div>
+			</div>
+
+		</div>
+
+
+	</div>
+
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <!-- my script -->
+    <script src="./assets/js/script.js"></script>    
+    
+</body>
+</html>
