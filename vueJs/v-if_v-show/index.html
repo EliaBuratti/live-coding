@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prove</title>
+</head>
+<body>
+
+
+    <div id="app">
+
+        <header>
+            <!-- v-if genera gli elementi nella dom -->
+            <h1 v-if="cliccato" >Questa è una prova</h1>
+            <h1 v-else>Mi hai cliccato</h1>
+
+            <!-- v-show cambia la classe css togliendo il dispay none -->
+            <h1 v-show="cliccatoSecondo">hai cliccato il secondo bottone</h1>
+
+            <!-- toggle testo con v-if -->
+            <button @click="cliccato = !cliccato">toggle testo con v-if</button>
+
+            <!-- toggle testo con v-show -->
+            <button @click="cliccatoSecondo = !cliccatoSecondo">toggle testo con v-show</button>
+
+        </header>  
+        
+        <section> <!-- v-for -->
+            <ul>
+                <li v-for="item in items" :key="item.id" >
+                    {{item.message}}
+                    {{item.job}}
+                </li>
+            </ul>
+        </section>
+
+        <!-- stampare numeri da 1 a cento -->
+        <section>
+            <ul>
+                <li v-for="n in 100" :key="n">
+                    {{n}}
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="./script.js"></script>    
+    
+</body>
+</html>
