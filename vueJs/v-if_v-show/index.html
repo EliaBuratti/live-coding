@@ -4,27 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>prove</title>
+    <style>
+        main {
+            display: flex;
+        }
+    </style>
 </head>
 <body>
 
 
     <div id="app">
 
-        <header>
-            <!-- v-if genera gli elementi nella dom -->
-            <h1 v-if="cliccato" >Questa è una prova</h1>
-            <h1 v-else>Mi hai cliccato</h1>
+        <main>
+            <section>
+                <!-- v-if genera gli elementi nella dom -->
+                <h1 v-if="cliccato" >Questa è una prova</h1>
+                <h1 v-else>Mi hai cliccato</h1>
+    
+                <!-- v-show cambia la classe css togliendo il dispay none -->
+                <h1 v-show="cliccatoSecondo">hai cliccato il secondo bottone</h1>
+    
+                <!-- toggle testo con v-if -->
+                <button style="height: 2rem" @click="cliccato = !cliccato">toggle testo con v-if</button>
+    
+                <!-- toggle testo con v-show -->
+                <button style="height: 2rem" @click="cliccatoSecondo = !cliccatoSecondo">toggle testo con v-show</button>
+            </section>
 
-            <!-- v-show cambia la classe css togliendo il dispay none -->
-            <h1 v-show="cliccatoSecondo">hai cliccato il secondo bottone</h1>
-
-            <!-- toggle testo con v-if -->
-            <button @click="cliccato = !cliccato">toggle testo con v-if</button>
-
-            <!-- toggle testo con v-show -->
-            <button @click="cliccatoSecondo = !cliccatoSecondo">toggle testo con v-show</button>
-
-        </header>  
+         
         
         <section> <!-- v-for -->
             <ul>
@@ -43,6 +50,16 @@
                 </li>
             </ul>
         </section>
+
+        <!-- Data un array di stringhe stampa una lista ordinata -->
+        <section>
+            <ol>
+                <li v-for="stringa in arrayStringhe" >
+                    {{stringa}}
+                </li>
+            </ol>
+        </section>
+    </main> 
 
     </div>
 

@@ -40,8 +40,9 @@ createApp({
                 bool: true,
                 job: 'impiegato',
             }
-        ]
-      
+        ],
+        
+        arrayStringhe: ['ciao', 'cipolla', 'monitor', 'mouse'],
     }
 
   },
