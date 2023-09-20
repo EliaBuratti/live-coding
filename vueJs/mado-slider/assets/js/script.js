@@ -7,11 +7,11 @@ Creiamo un oggetto Movie, con le seguenti proprieta:
 - length che conterra la lunghezza del film in minuti
 
 
-MILESTONE 2
+MILESTONE 2 ☑️
 Creare il markup ed utilizzare le direttive vue per stampare a schermo il film in una card.
  Mostrando la prima immagine, il titolo, la categoria e la lunghezza;
 
-MILESTONE 3
+MILESTONE 3 ☑️
 Aggiungiamo due frecce al markup e utilizziamole per rendere dimanico lo slider. 
 Al click sulla freccia di destra scorriamo all'immagine successiva
 Al click sulla freccia di sinistra scorriamo all'immagine precedente
@@ -28,7 +28,7 @@ createApp({
   data() {
     return {
         activeImage: 0,
-
+        activeCard: 'active',
         movie: {
             title:'the mandalorian',
             images:[
@@ -50,10 +50,13 @@ createApp({
 
         next (){
             this.activeImage++;
+            
 
             if (this.activeImage > this.movie.images.length - 1 ) {
                 this.activeImage = 0;
             }
+            
+
         },
         prev (){
             this.activeImage--;
@@ -61,6 +64,16 @@ createApp({
             if (this.activeImage < 0 ) {
                 this.activeImage = this.movie.images.length - 1
             }
+        },
+        activeThumb (idThumb) {
+            console.log(idThumb);
+            
+            document.querySelectorAll('.thumbnails img')[idThumb].classList.add('active');
+
+            document.querySelector('.thumbnails img.active').classList.remove('active');
+            
+            console.log(document.querySelectorAll('.thumbnails img')[idThumb]);
+            
         }
       }
   },
