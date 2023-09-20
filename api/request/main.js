@@ -58,6 +58,10 @@ createApp({
             this.pcNumber = response.data.response;
         })
 
+        .catch(error => {
+            console.log(error);
+        })
+
         //se devo scrivere tante volte, posso usare un for
         
     }
