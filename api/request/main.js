@@ -28,7 +28,7 @@ Tramite due chiamate axios, generiamo 2 numeri casuali: uno per l'utente e uno p
 Stampiamo in pagina i due numeri e il vincitore, ossia chi ha il numero più grande. */
 
 
-const { createApp } = Vue
+/* const { createApp } = Vue
 
 createApp({
   data() {
@@ -56,6 +56,39 @@ createApp({
             console.log(response);
 
             this.pcNumber = response.data.response;
+        })
+
+        .catch(error => {
+            console.log(error);
+        })
+
+        //se devo scrivere tante volte, posso usare un for
+        
+    }
+}).mount('#app') */
+
+
+//Richiedere all'endpoint una frase e stamparla in pagina
+
+const { createApp } = Vue
+
+createApp({
+  data() {
+
+    return {
+
+        randomFrase : '',
+        
+        }
+    },
+    mounted() {
+        console.log('montato');
+        axios.get('https://flynn.boolean.careers/exercises/api/random/sentence') //inserisci api https
+        
+        .then(response => {
+            console.log(response);
+
+            this.randomFrase = response.data.response;
         })
 
         .catch(error => {

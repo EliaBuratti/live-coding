@@ -8,25 +8,30 @@
 <body>
 
     <div id="app">
+
         <!-- vrite your code here -->
+<!--         <div class="ex-2">
+            numero utente: {{playerNumber}}
+            <hr>
+            numero pc: {{pcNumber}}
+            <hr>
+            il vincitore è: 
+            se il minore è segnato in rosso comunque funziona!
+            <span v-if="playerNumber > pcNumber">
+                User!
+            </span>
+    
+            <span v-else-if=" pcNumber > playerNumber ">
+                Pc!
+            </span>
+    
+            <span v-else>
+                Pari!
+            </span>
+        </div> -->
 
-        numero utente: {{playerNumber}}
-        <hr>
-        numero pc: {{pcNumber}}
-        <hr>
-        il vincitore è: 
-        <!-- se il minore è rosso comunque funziona! -->
-        <span v-if="playerNumber > pcNumber">
-            User!
-        </span>
-
-        <span v-else-if=" pcNumber > playerNumber ">
-            Pc!
-        </span>
-
-        <span v-else>
-            Pari!
-        </span>
+        <!-- stampo in pagina la frase di risposta -->
+        {{ randomFrase }}
     </div>
 
 
