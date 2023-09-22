@@ -1,8 +1,20 @@
-<script setup>
+<script>
 import HelloWorld from './components/HelloWorld.vue';
 import template from './components/template.vue';
+export default {
 
-/* manca una parte BEST PRACTICE, vedi il file pushato di fabio */
+  name: 'app',
+  data() {
+    return {
+
+    }
+  },
+  components: { // da inserire tutti gli import che faccio
+    HelloWorld,
+    template,
+  }
+
+}
 </script>
 
 <template>
