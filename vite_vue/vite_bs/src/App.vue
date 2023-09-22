@@ -1,17 +1,29 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue';
+import template from './components/template.vue';
+
+/* manca una parte BEST PRACTICE, vedi il file pushato di fabio */
 </script>
 
 <template>
   <h1>ciao mondo</h1>
   <HelloWorld msg="Vite + Vue" />
+  <template></template>
 </template>
 
-<!-- <style lang="scss">  scoped limita le classi alla singola app   lang="scss" serve per far riconoscere al browser che è scritto in sass  
+<!-- <style lang="scss" scoped>  scoped limita le classi alla singola app   lang="scss" serve per far riconoscere al browser che è scritto in sass  
  @use './assets/scss/app.scss' posso importare il scss in questo modo
+per importare scss @use ' percorso scss(non serve mettere .scss) ' + as + *  (asterisco intende tutto) + ;
+
 </style> -->
 
-<style></style>
+<style lang="scss" scoped>
+@use './assets/scss/partials/variable' as *;
+
+h1 {
+  color: $tx-color;
+}
+</style>
 
 
 
@@ -21,3 +33,6 @@ import HelloWorld from './components/HelloWorld.vue'
 
   npm add -D sass
  -->
+
+<!-- vbase mi crea il template -->
+

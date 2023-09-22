@@ -1,2 +1,13 @@
 @use '../../../node_modules/bootstrap/scss/bootstrap.scss';
-/* npm i --save bootstrap @popperjs/core prima devo installare bs da terminale */
+/* npm i --save bootstrap @popperjs/core => prima devo installare bs da terminale */
+
+/* per importare scss @use ' percorso scss(non serve mettere .scss) ' + as + *  (asterisco intende tutto) + ; */
+/* variabili */
+
+@use '../scss/partials/variable' as *;
+
+
+/* common */
+body {
+  background-color: $bg-body;
+}
